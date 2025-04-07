@@ -1,0 +1,30 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quote</title>
+</head>
+<link rel="stylesheet" href="{% static 'style.css' %}">
+<body>
+    <button id="r" onclick="location.reload();">Refresh</button>
+    <div class="page1">
+        
+        <div class="main-box">
+            <div class="photo-box">
+                <img id="h" src="{{ data.photo.url }}" alt="Author Photo">
+                <!-- <p>{{ data.photo.url }}</p> -->
+            </div>
+            <div class="quote">
+                <div class="one">
+                    <p>"{{ data.quote }}"</p>
+                    <br>
+                    <h4>- {{ data.author }}</h4>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+</body>
+</html>
